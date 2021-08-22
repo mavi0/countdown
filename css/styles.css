@@ -10,6 +10,7 @@ body {
     background: #000 url(../img/background.jpg);
     background-attachment: fixed;
     background-blend-mode: hard-light;
+    
 }
 
 .container {
@@ -18,19 +19,22 @@ body {
     left: 100px;
     right: 100px;
     bottom: 80px;
-    background: url(../img/background.jpg);
+    /* background: url(../img/background.jpg); */
     background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    backdrop-filter: blur(6px);
+    -moz-backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5),
                 0 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
 .container h2 {
     text-align: center;
-    font-size: 10em;
+    font-size: 700%;
     line-height: 0.7em;
     color: #333;
     margin-top: -80px;
@@ -45,6 +49,7 @@ body {
 
 .countdown {
     display: flex;
+    justify-content: space-between;
     margin-top: 50px;
 }
 
@@ -84,9 +89,37 @@ body {
 }
 
 .countdown #minute:before {
-    content: 'Minutes';
+    content: 'Mins';
 }
 
 .countdown #second:before {
-    content: 'Seconds';
+    content: 'Secs';
+}
+
+
+/* Lets make this work on moble */
+
+@media only screen and (max-width: 1000px) {
+
+    .container {
+        top: 8%;
+        left: 5%;
+        right: 5%;
+        bottom: 8%;
+    }
+    .container h2 {
+        margin-top: -30px;
+        font-size: 500%;
+        line-height: 100%;
+    }
+
+    .countdown {
+        width: 90%;
+    }
+
+    .countdown div {
+        max-width: 20%;
+        height: 100px;
+        margin: 0;
+    }
 }
