@@ -1,4 +1,4 @@
-var countDate = new Date('Dec 31, 2020 00:00:00').getTime();
+var countDate = new Date('Sept 13, 2021 12:00:00').getTime();
 
 function newYear() {
     var now = new Date().getTime();
