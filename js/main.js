@@ -1,4 +1,4 @@
-var countDate = new Date('Sept 13, 2021 12:00:00').getTime();
+var countDate = new Date(Date.UTC(2021, 8, 13, 2, 30, 0)).getTime();
 
 function newYear() {
     var now = new Date().getTime();
