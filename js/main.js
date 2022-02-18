@@ -1,4 +1,4 @@
-var countDate = new Date(Date.UTC(2022, 10, 22, 2, 30, 0)).getTime();
+var countDate = new Date(Date.UTC(2022, 3, 22, 9, 30, 0)).getTime();
 
 function newYear() {
     var now = new Date().getTime();
